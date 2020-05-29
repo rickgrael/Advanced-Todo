@@ -1,12 +1,13 @@
 let cards = document.querySelectorAll(".card");
 let dropzones = document.querySelectorAll(".dropzone")
-let status = document.querySelectorAll(".status");
+let status;
 let dropBoard;
 let draggedCard;
 
 addEventToCards();
 
 function addEventToStatus(){
+    status = document.querySelectorAll(".status");
     status.forEach(stat => (stat.addEventListener("click", changeColor)))
 }
 
@@ -33,37 +34,37 @@ function drag(){
 
 function dragend(e){
     console.log("Drag ended")
+    dropBoard = document.querySelector(".is-over");
+    console.log(dropBoard.classList)
+    if( !dropBoard.classList.contains("is-over")){
+        console.log("excluir")
+        draggedCard.remove();
+        dropzones.forEach(dropzone=> dropzone.classList.toggle("drop-area"))
+        return;
+    }
     dropBoard.appendChild(draggedCard)
     e.target.classList.toggle("card-changing")
     dropzones.forEach(dropzone=> dropzone.classList.toggle("drop-area"))
 }
 
 dropzones.forEach(dropzone=>{
-    dropzone.addEventListener("dragenter", dragenter);
     dropzone.addEventListener("dragover", dragover);
     dropzone.addEventListener("dragleave", dragleave);
-    dropzone.addEventListener("drop", drop);
 })
 
-function dragenter(){
-    console.log("Drag enter")
-    
-}
 function dragover(){
     console.log("Drag over")
     let pai = this;
     pai.classList.add("is-over");
 
-    dropBoard = document.querySelector(".is-over");
+    console.log(dropBoard)
 }
 function dragleave(){
     console.log("Drag leave")
     let pai = this;
     pai.classList.remove("is-over");
 }
-function drop(){
-    console.log("Dropped")
-}
+
 
 //adding new todos
 
@@ -88,4 +89,11 @@ btnAdd.addEventListener("click",()=>{
     firstZone.appendChild(card);
     inputContent.value="";
     addEventToCards();
+    addEventToStatus();
 })
+
+function changeColor(){
+    let newColor = prompt("Digite a nova cor em inglês.","red");
+    this.className="status "+ newColor;
+    
+}
