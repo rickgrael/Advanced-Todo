@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Nunito',sans-serif,Arial;
+}
+body{
+    box-sizing: border-box;
+    background-color: #130f0d;
+    color: rgb(241, 239, 239);
+    padding: 1rem;
+}
+.boards{
+    display: flex;
+    margin-top: 32px;
+}
+.board{
+    background-color: #141316;
+    border: 1px solid #fd951f11;
+    border-radius: 4px;
+    margin: 0 16px;
+}
+
+.board h3{
+    padding: 16px;
+    color: #fd951fcc;
+    background-color: rgb(49, 49, 49);
+}
+.dropzone{
+    padding: 16px;
+    min-width: 330px;
+    min-height: 200px;
+}
+.card{
+    background-color: #1a1a1c;
+    padding: 16px;
+    box-shadow: 0 2px 4px -1px #fd951fcc;
+    width: 300px;
+    margin: 25px auto;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 18px;
+}
+.status{
+    background: #ffbb;
+    width: 30px;
+    height: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.red{
+    background-color: rgb(233, 48, 48);
+}
+.blue{
+    background-color: rgb(110, 110, 214);
+}
+.green{
+    background-color: rgb(111, 236, 111);
+}   
+#div1 {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+
+.drop-area{
+    background-color: rgb(17, 27, 14);
+    transition: all 0.3s ease;
+}
+.card-changing{
+    opacity: 0.1;
+    cursor: move;
+}
+.is-over{
+    background-color: rgba(172, 255, 47, 0.322);
+}
+
+#todo-add{
+    padding: 2rem 15px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+}
+.input-content, .btn-add{
+    border: none;
+    margin: 0;
+    font-size: 18px;
+    padding: 0.6rem;
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+.input-content::placeholder{
+    color: white;
+    opacity: .7;
+    font-size: 19px;
+}
+.btn-add{
+    transition: all .3s ease;
+}
+.btn-add:hover{
+    cursor: pointer;
+    color: rgb(32, 32, 32);
+    background-color: white;
+}
+
+.color-selector{
+    margin-left: 1rem;
+    border: none;
+    background-color: rgb(53, 52, 52);
+    padding: 0.6rem 0.1rem;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+.color-selector option{
+    font-weight: 600;
+    padding: 1rem;
+}

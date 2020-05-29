@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d6ab52e214.js" crossorigin="anonymous"></script>
+    <title>Todo advanced</title>
+</head>
+
+<body>
+    <h1>Quadro de tarefas</h1>
+    <form>
+        <div id="todo-add">
+            <input type="text" class="input-content" placeholder="Digite a tarefa">
+            <button class="btn-add"><i class="fas fa-plus"></i></button>
+            <select class="color-selector">
+                <option value="red">Vermelho</option>
+                <option value="blue">Azul</option>
+                <option value="green">Verde</option>
+            </select>
+        </div>
+
+    </form>
+
+
+    <div class="boards">
+        <div class="board">
+            <h3>Todo</h3>
+            <div class="dropzone">
+
+            </div>
+        </div>
+        <div class="board">
+            <h3>Fazendo</h3>
+            <div class="dropzone">
+
+            </div>
+        </div>
+        <div class="board">
+            <h3>Finalizado</h3>
+            <div class="dropzone">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>
